@@ -38,6 +38,7 @@ body {
     }
     .nav-item {
         margin: 0; /* Убираем отступы у пунктов меню */
+    }
     .nav-link {
         color: white; /* Белый цвет текста ссылок */
         text-decoration: none; /* Убираем подчеркивание ссылок */
@@ -119,12 +120,12 @@ body {
         }
     .skill-tag:hover {
         transform: translateY(-3px); /* Поднятие элемента при наведении */
-        box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при
+        box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+     } /* Увеличение тени при
         наведении */
         /* ===== ОПЫТ РАБОТЫ ===== */
-        .experience-section {
+    .experience-section {
         margin-top: 50px; /* Отступ сверху */
-        }
         }
     .section-title {
         font-size: 28px; /* Размер шрифта заголовка секции */
@@ -142,10 +143,10 @@ body {
         border-left: 4px solid #667eea; /* Синяя полоса слева */
         transition: transform 0.3s ease; /* Плавная анимация трансформации */
         }
-        }
     .experience-card:hover {
         transform: translateX(5px); /* Сдвиг вправо при наведении */
-        .experience-title {
+    }
+    .experience-title {
         font-size: 20px; /* Размер шрифта заголовка опыта */
         color: #2c3e50; /* Темно-синий цвет текста */
         margin: 0 0 10px 0; /* Отступ снизу */
@@ -165,4 +166,3 @@ body {
         padding: 30px; /* Внутренние отступы */
         margin-top: 50px; /* Отступ сверху */
         }
-}
