@@ -1,48 +1,61 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang = "ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
     <title>Семестровая работа</title>
 </head>
 <body>
-    <div id="header">Хэдер</div>
-    <div id="menu">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="pages/news.html">Новости</a></li>
-            <li><a href="pages/practices.html">Практики</a></li>
-            <li><a href="pages/goods.html">Товары</a></li>
-            <li><a href="pages/contacts.html">Контакты</a></li>
+    <div class="page-container">
+        <div class="header">Хэдер</div>
+        <div class="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link"
+            href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link"
+            href="pages/news.html">Блог</a></li>
+            <li class="nav-item"><a class="nav-link"
+            href="pages/practices.html">Практики</a></li>
+            <li class="nav-item"><a class="nav-link"
+            href="pages/goods.html">Каталог товаров</a></li>
+            <li class="nav-item"><a class="nav-link"
+            href="pages/contacts.html">Связь</a></li>
+</ul>
         </ul>
     </div>
-     <div id="content">
-        <p>Информация об авторе</p>
-        <img src="images/photo.png" alt="Фото автора" width="200"
-        height="250">
-        <p>Мусариева Екатерина Руслановна</p>
-        <p>ЭФБО-16-24</p>
+     <div class="content">
+        <div class="profile-header">
+            <h1 class="profile-title">Информация об авторе</h1>
+        <img class="profile-photo" src="images/photo.png" alt="Фото автора">
+        <h2 class="profile-name">Мусариева Екатерина Руслановна</h2>
+        <p class="profile-group">ЭФБО-16-24</p>
+        </div>
+        <div class="about-me">
         <p>Обо мне: я катя муру.</p>
-        <div>Навык 1</div>
-        <div>Навык 2</div>
-        <div>Навык 3</div>
-        <div>Навык 4</div>
-        <div>
-            Мой опыт работы:
-            <div>
-                Опыт 1<br>
-                Нет опыта.
+        </div>
+        <div class="skills-container">
+        <div class="skill-tag">Навык 1</div>
+        <div class="skill-tag">Навык 2</div>
+        <div class="skill-tag">Навык 3</div>
+        <div class="skill-tag">Навык 4</div>
+     </div>
+        <div class="expirience-section">
+            <h2 class="section-title">Мой опыт работы:></h2>
+            <div class="expirience-card">
+                <h3 class="expirience-title"> Опыт 1</h3>
+                <p class="expitience-desc">Нет опыта.</p>
             </div>
-            <div>
-                Опыт 2<br>
-                Тоже нет опыта.
-            </div>
-            <div>
-                Опыт 3<br>
-                Опять нет опыта.
-            </div>
+        <div class="expirience-card">
+                <h3 class="expirience-title"> Опыт 2</h3>
+                <p class="expitience-desc">Тоже нет опыта.</p>
+        </div>
+            <div class="expirience-card">
+                <h3 class="expirience-title"> Опыт 3</h3>
+                <p class="expitience-desc">Опять нет опыта.</p>
+        </div>
         </div>
     </div>
-    <div id="footer">Футер</div>
+    <div class="footer">Футер</div>
 </body>
 </html>
