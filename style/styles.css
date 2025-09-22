@@ -4,6 +4,7 @@ body {
         padding: 0; 
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         min-height: 100vh; 
+}
     .page-container {
         max-width: 1200px; /* Максимальная ширина контента */
         margin: 0 auto; /* Центрирование контейнера по горизонтали */
@@ -34,7 +35,6 @@ body {
         display: flex; /* Горизонтальное расположение элементов */
         justify-content: center; /* Выравнивание по центру */
         gap: 25px; /* Расстояние между элементами навигации */
-    }
     }
     .nav-item {
         margin: 0; /* Убираем отступы у пунктов меню */
