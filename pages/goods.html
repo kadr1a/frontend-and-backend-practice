@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../style/styles.css">
-        <title>Каталог товаров</title>
-    </head>
-    <body>
-        <div class="page-container">
-            <div class="header">Хэдер</div>
-            <div class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Блог</a></li>
-                    <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Каталог товаров</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Связь</a></li>
-                </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <title>Каталог товаров</title>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Хэдер</h1>
+        </header>
+        
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="news.html">Блог</a></li>
+                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+                <li class="nav-item"><a class="nav-link" href="goods.html">Каталог товаров</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Связь</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1 class="section-title">Каталог товаров</h1>
+            <div class="products-grid">
+                <article class="product-card">
+                    <img class="product-image" src="../images/goods1.png" alt="Фото товара 1">
+                    <h3 class="product-name">Хотдог</h3>
+                    <p class="product-price">100 рублей</p>
+                </article>
+                <article class="product-card">
+                    <img class="product-image" src="../images/goods2.png" alt="Фото товара 2">
+                    <h3 class="product-name">Совместное фото</h3>
+                    <p class="product-price">0 рублей</p>
+                </article>
+                <article class="product-card">
+                    <img class="product-image" src="../images/goods3.png" alt="Фото товара 3">
+                    <h3 class="product-name">Котик</h3>
+                    <p class="product-price">Бесценно</p>
+                </article>
             </div>
-            <div class="content">
-                <h1 class="section-title">Каталог товаров</h1>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <img class="product-image" src="../images/goods1.png" alt="Фото товара 1">
-                        <h3 class="product-name">Хотдог</h3>
-                        <p class="product-price">100 рублей</p>
-                    </div>
-                    <div class="product-card">
-                        <img class="product-image" src="../images/goods2.png" alt="Фото товара 2">
-                        <h3 class="product-name">Совместное фото</h3>
-                        <p class="product-price">0 рублей</p>
-                    </div>
-                    <div class="product-card">
-                        <img class="product-image" src="../images/goods3.png" alt="Фото товара 3">
-                        <h3 class="product-name">Котик</h3>
-                        <p class="product-price">Бесценно</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">Футер</div>    
-        </div>
-    </body>
+        </main>
+
+        <footer class="footer">
+            <p>Футер</p>
+        </footer>
+    </div>
+</body>
 </html>
