@@ -7,11 +7,10 @@
     <title>Связь</title>
     <style>
         dialog::backdrop {
-        background: rgba(0, 0, 0, 0.6);
-        animation: fadeIn 0.3s ease;
-        }
-
-        dialog {
+    background: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+    }
+    dialog {
         border: none;
         border-radius: 12px;
         padding: 0;
@@ -21,40 +20,34 @@
         width: 90vw;
         max-height: 90vh;
         overflow-y: auto;
-        }
-
-        .modal-header {
-        background: linear-gradient(135deg, #d63384 0%, #e83e8c 100%);
-        color: white;
+    }
+    .modal-header {
+        background: linear-gradient(135deg, #b8b5ff 0%, #ffd6e0 100%);
+        color: #6d6875;
         padding: 1.5rem;
         border-radius: 12px 12px 0 0;
         margin: 0;
-        }
-
-        .modal-header h2 {
+    }
+    .modal-header h2 {
         margin: 0;
-        color: white;
+        color: #6d6875;
         font-size: 1.5rem;
-        }
-
-        .modal-content {
+    }
+    .modal-content {
         padding: 2rem;
-        }
-
-        .form-group {
+    }
+    .form-group {
         margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
+    }
+    .form-group label {
         display: block;
         margin-bottom: 0.5rem;
         font-weight: 600;
-        color: #d63384;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        color: #b8b5ff;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
         width: 100%;
         padding: 0.75rem;
         border: 2px solid #e9ecef;
@@ -62,28 +55,24 @@
         font-size: 1rem;
         transition: border-color 0.3s ease;
         box-sizing: border-box;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
         outline: none;
-        border-color: #ff85a2;
-        }
-
-        .form-group textarea {
+        border-color: #b8b5ff;
+    }
+    .form-group textarea {
         min-height: 100px;
         resize: vertical;
-        }
-
-        .modal-actions {
+    }
+    .modal-actions {
         display: flex;
         gap: 1rem;
         justify-content: flex-end;
         margin-top: 2rem;
-        }
-
-        .btn {
+    }
+    .btn {
         padding: 0.75rem 1.5rem;
         border: none;
         border-radius: 6px;
@@ -91,38 +80,31 @@
         font-size: 1rem;
         transition: all 0.3s ease;
         font-weight: 600;
-        }
-
-        .btn-primary {
-        background: linear-gradient(135deg, #ff85a2 0%, #ffafcc 100%);
+    }
+    .btn-primary {
+        background: linear-gradient(135deg, #b8b5ff 0%, #ffd6e0 100%);
         color: white;
-        }
-
-        .btn-primary:hover {
+    }
+    .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-secondary {
+        box-shadow: 0 5px 15px rgba(184, 181, 255, 0.4);
+    }
+    .btn-secondary {
         background: #f8f9fa;
-        color: #d63384;
+        color: #b8b5ff;
         border: 2px solid #e9ecef;
-        }
-
-        .btn-secondary:hover {
+    }
+    .btn-secondary:hover {
         background: #e9ecef;
-        }
-
-        .required {
-        color: #e74c3c;
-        }
-
-        @keyframes fadeIn {
+    }
+    .required {
+        color: #ffafcc;
+    }
+    @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
+    }
+    @keyframes slideIn {
         from {
             opacity: 0;
             transform: translateY(-50px) scale(0.9);
@@ -131,22 +113,19 @@
             opacity: 1;
             transform: translateY(0) scale(1);
         }
-        }
-
-        @media (max-width: 600px) {
+    }
+    @media (max-width: 600px) {
         dialog {
             margin: 1rem;
             width: calc(100vw - 2rem);
         }
-        
         .modal-actions {
             flex-direction: column;
         }
-        
-        .modal-actions .btn {
+        .btn {
             width: 100%;
-            }
         }
+    }
     </style>
 </head>
 <body>
