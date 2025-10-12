@@ -3,224 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <title>Главная - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        dialog::backdrop {
-    background: rgba(0, 0, 0, 0.6);
-    animation: fadeIn 0.3s ease;
-    }
-        dialog {
-            border: none;
-            border-radius: 12px;
-            padding: 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            animation: slideIn 0.3s ease;
-            max-width: 500px;
-            width: 90vw;
-            max-height: 90vh;
-            overflow-y: auto;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
-        .modal-header {
-            background: linear-gradient(135deg, #b8b5ff 0%, #ffd6e0 100%);
-            color: #6d6875;
-            padding: 1.5rem;
-            border-radius: 12px 12px 0 0;
-            margin: 0;
-        }
-        .modal-header h2 {
-            margin: 0;
-            color: #6d6875;
-            font-size: 1.5rem;
-        }
-        .modal-content {
-            padding: 2rem;
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #b8b5ff;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e9ecef;
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            box-sizing: border-box;
-        }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #b8b5ff;
-        }
-        .form-group textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 2rem;
-        }
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            font-weight: 600;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, #b8b5ff 0%, #ffd6e0 100%);
-            color: white;
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(184, 181, 255, 0.4);
-        }
-        .btn-secondary {
-            background: #f8f9fa;
-            color: #b8b5ff;
-            border: 2px solid #e9ecef;
-        }
-        .btn-secondary:hover {
-            background: #e9ecef;
-        }
-        .required {
-            color: #ffafcc;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-        @media (max-width: 600px) {
-            dialog {
-                margin: 1rem;
-                width: calc(100vw - 2rem);
-            }
-            .modal-actions {
-                flex-direction: column;
-            }
-            .btn {
-                width: 100%;
-            }
+        .skill-badge {
+            font-size: 0.8rem;
         }
     </style>
 </head>
-<body>
-    <div class="page-container">
-        <header class="header">
-            <h1>Портфолио</h1>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Мой Портфолио</h1>
+                        <p class="mb-0 opacity-75">Студент разработчик</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-16-24</span>
+                    </div>
+                </div>
+            </div>
         </header>
-        
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/news.html">Блог</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/practices.html">Практики</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/goods.html">Каталог товаров</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="pages/contacts.html">Связь</a>
-                </li>
-            </ul>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/news.html">
+                                <i class="bi bi-newspaper me-1"></i>Блог
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/goods.html">
+                                <i class="bi bi-cart me-1"></i>Каталог товаров
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Связь
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
-        <main class="content">
-            <article class="profile-header">
-                <h1 class="profile-header__title">Информация об авторе</h1>
-                <img class="profile-header__photo" src="images/photo.png" alt="Фото автора">
-                <h2 class="profile-header__name">Мусариева Екатерина Руслановна</h2>
-                <p class="profile-header__group">ЭФБО-16-24</p>
-            </article>
-
-            <section class="about-me">
-                <h2 class="about-me__title">Обо мне</h2>
-                <p>Обо мне: я катя муру.</p>
-            </section>
-
-            <section class="skills">
-                <h2 class="skills__title">Мои навыки</h2>
-                <div class="skills__grid">
-                    <div class="skill">Навык 1</div>
-                    <div class="skill">Навык 2</div>
-                    <div class="skill">Навык 3</div>
-                    <div class="skill">Навык 4</div>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Profile Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="images/photo.png" alt="Фото студента" class="profile-img rounded-circle">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="card-title h4 text-primary">Мусариева Екатерина Руслановна</h2>
+                                <p class="card-text text-muted mb-2">
+                                    <i class="bi bi-bookmark-check-fill text-primary"></i>
+                                    Студент группы ЭФБО-16-24
+                                </p>
+                                <p class="card-text">
+                                    Факультет экономики и бизнеса
+                                </p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <span class="badge bg-primary skill-badge">Навык 1</span>
+                                    <span class="badge bg-success skill-badge">Навык 2</span>
+                                    <span class="badge bg-info skill-badge">Навык 3</span>
+                                    <span class="badge bg-warning skill-badge">Навык 4</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="experience">
-                <h2 class="experience__title">Мой опыт работы</h2>
-                <div class="experience__grid">
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">Опыт 1</h3>
-                        <p class="experience-card__desc">Нет опыта.</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">Опыт 2</h3>
-                        <p class="experience-card__desc">Тоже нет опыта.</p>
-                    </article>
-                    <article class="experience-card">
-                        <h3 class="experience-card__title">Опыт 3</h3>
-                        <p class="experience-card__desc">Опять нет опыта.</p>
-                    </article>
+            <!-- About Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-person-circle text-primary"></i>
+                            Обо мне
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Обо мне: я катя муру.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <section class="contacts">
-                <h2 class="contacts__title">Связь со мной</h2>
-                <article class="contacts__info">
-                    <h3>Электронная почта</h3>
-                    <p>Адрес электронной почты: katya.musarieva@icloud.com</p>
-                </article>
-                <article class="contacts__info">
-                    <h3>Физический адрес</h3>
-                    <p>Адрес: хахахахахахаха</p>
-                </article>
-                <button class="contacts__button" onclick="contactModal.showModal()">Связаться со мной</button>
+            <!-- Skills Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-tools text-primary"></i>
+                            Мои навыки
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Навык 1</span>
+                                        <span class="text-primary">90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Навык 2</span>
+                                        <span class="text-primary">75%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Навык 3</span>
+                                        <span class="text-primary">85%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-info" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Навык 4</span>
+                                        <span class="text-primary">70%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-briefcase text-primary"></i>
+                            Мой опыт работы
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-primary">Опыт 1</h5>
+                                        <p class="card-text">Нет опыта.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-success">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-success">Опыт 2</h5>
+                                        <p class="card-text">Тоже нет опыта.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 border-info">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-info">Опыт 3</h5>
+                                        <p class="card-text">Опять нет опыта.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contacts Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-telephone text-primary"></i>
+                            Связь со мной
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h5 class="text-primary">Электронная почта</h5>
+                                    <p class="mb-0">katya.musarieva@icloud.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h5 class="text-primary">Физический адрес</h5>
+                                    <p class="mb-0">хахахахахахаха</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <button class="btn btn-primary" onclick="contactModal.showModal()">
+                                <i class="bi bi-chat-dots me-1"></i>Связаться со мной
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
-        <footer class="footer">
-            <p>Футер</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
-
-        <!-- Модальное окно (остается без изменений) -->
-        <dialog id="contactModal">
-            <!-- Твой существующий код модального окна -->
-        </dialog>
-
-        <script>
-            // Твой существующий JavaScript код
-        </script>
     </div>
+
+    <!-- Modal -->
+    <dialog id="contactModal" class="rounded-3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Форма обратной связи</h5>
+                    <button type="button" class="btn-close btn-close-white" onclick="contactModal.close()"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="feedbackForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Имя <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name" name="name" required placeholder="Введите ваше имя">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Телефон <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Электронная почта <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="example@mail.ru">
+                        </div>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Категория обращения <span class="text-danger">*</span></label>
+                            <select class="form-select" id="category" name="category" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Текст обращения <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" name="message" required rows="4" placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="contactModal.close()">Отмена</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function submitForm() {
+            const form = document.getElementById('feedbackForm');
+            const formData = new FormData(form);
+            
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                category: formData.get('category'),
+                message: formData.get('message')
+            };
+            
+            console.log('Данные формы:', data);
+            alert('Спасибо! Ваше обращение отправлено. Я свяжусь с вами в ближайшее время.');
+            contactModal.close();
+            form.reset();
+        }
+
+        document.getElementById('contactModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.close();
+            }
+        });
+    </script>
 </body>
 </html>
