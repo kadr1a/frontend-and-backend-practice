@@ -9,51 +9,61 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>Хэдер</h1>
+            <h1>Каталог товаров</h1>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="news.html">Блог</a></li>
-                <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="goods.html">Каталог товаров</a></li>
-                <li class="nav-item"><a class="nav-link" href="contacts.html">Связь</a></li>
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="news.html">Блог</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="goods.html">Каталог товаров</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Связь</a>
+                </li>
             </ul>
         </nav>
 
         <main class="content">
-            <section class="products-section">
-                <h1 class="section-title">Каталог товаров</h1>
-                <div class="products-grid">
+            <section class="products">
+                <h1 class="products__title">Каталог товаров</h1>
+                <div class="products__grid">
                     <article class="product-card">
-                        <div class="product-image-container">
-                            <img class="product-image" src="../images/goods1.png" alt="Фото товара 1">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/goods1.png" alt="Фото товара 1">
                         </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Хотдог</h3>
-                            <p class="product-price">100 рублей</p>
-                            <button class="product-button">В корзину</button>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">Хотдог</h3>
+                            <p class="product-card__price">100 рублей</p>
+                            <button class="product-card__button">В корзину</button>
                         </div>
                     </article>
                     <article class="product-card">
-                        <div class="product-image-container">
-                            <img class="product-image" src="../images/goods2.png" alt="Фото товара 2">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/goods2.png" alt="Фото товара 2">
                         </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Совместное фото</h3>
-                            <p class="product-price">0 рублей</p>
-                            <button class="product-button">В корзину</button>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">Совместное фото</h3>
+                            <p class="product-card__price">0 рублей</p>
+                            <button class="product-card__button">В корзину</button>
                         </div>
                     </article>
                     <article class="product-card">
-                        <div class="product-image-container">
-                            <img class="product-image" src="../images/goods3.png" alt="Фото товара 3">
+                        <div class="product-card__image-container">
+                            <img class="product-card__image" src="../images/goods3.png" alt="Фото товара 3">
                         </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Котик</h3>
-                            <p class="product-price">Бесценно</p>
-                            <button class="product-button">В корзину</button>
+                        <div class="product-card__info">
+                            <h3 class="product-card__name">Котик</h3>
+                            <p class="product-card__price">Бесценно</p>
+                            <button class="product-card__button">В корзину</button>
                         </div>
                     </article>
                 </div>
