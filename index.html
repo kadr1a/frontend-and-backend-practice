@@ -6,7 +6,6 @@
     <title>Главная - Портфолио</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
 </head>
 <body class="bg-light">
     <div class="container-fluid p-0">
@@ -27,21 +26,32 @@
         </header>
 
         <!-- Навигация -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <div class="collapse navbar-collapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Главная</a>
+                            <a class="nav-link active" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/goods.html">Проекты</a>
+                            <a class="nav-link" href="pages/diary.html">
+                                <i class="bi bi-newspaper me-1"></i>Дневник
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/news.html">Новости</a>
+                            <a class="nav-link" href="pages/projects.html">
+                                <i class="bi bi-display me-1"></i>Проекты
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/contacts.html">Контакты</a>
+                            <a class="nav-link" href="pages/contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Связь
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -49,7 +59,8 @@
         </nav>
 
         <main class="container my-5">
-            <div class="row justify-content-center">
+            <!-- Основная информация -->
+            <div class="row justify-content-center mb-5">
                 <div class="col-md-10">
                     <div class="card shadow-sm border-0">
                         <div class="card-body p-5">
@@ -71,12 +82,98 @@
                                         Увлекаюсь веб-разработкой.
                                     </p>
                                     
-                                    <a href="assets/resume.pdf" download class="text-decoration-none">
-                                        <button class="btn btn-primary btn-lg">
-                                            <i class="bi bi-download me-2"></i>Скачать резюме
-                                        </button>
+                                    <a href="assets/resume.pdf" download class="btn btn-primary btn-lg">
+                                        <i class="bi bi-download me-2"></i>Скачать резюме
                                     </a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- навыки -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-10">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-primary mb-4 text-center">Мои навыки</h2>
+                            
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>HTML/CSS</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>JavaScript</span>
+                                        <span>80%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-primary" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Bootstrap</span>
+                                        <span>85%</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-primary mb-4 text-center">Лучшие проекты</h2>
+                            
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="card border-primary h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-primary">П1</h5>
+                                            <p class="card-text">Описание проекта 1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-4">
+                                    <div class="card border-primary h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-primary">П2</h5>
+                                            <p class="card-text">Описание проекта 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-4">
+                                    <div class="card border-primary h-100">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-primary">П3</h5>
+                                            <p class="card-text">Описание проекта 3</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="pages/projects.html" class="btn btn-outline-primary">
+                                    Посмотреть все проекты.
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -139,6 +236,14 @@
     .skill-badge {
         font-size: 0.8rem;
     }
-</style>
+    
+    .card {
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    </style>
 </body>
 </html>
