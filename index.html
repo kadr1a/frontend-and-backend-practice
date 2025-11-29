@@ -2,12 +2,110 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">    
     <title>Главная - Портфолио</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+    :root {
+        --bs-primary: #ff6b9d;
+        --bs-primary-rgb: 255, 107, 157;
+    }
+    
+    .text-primary {
+        color: #ff6b9d !important;
+    }
+    
+    .bg-primary {
+        background-color: #ff6b9d !important;
+    }
+    
+    .btn-primary {
+        background-color: #ff6b9d;
+        border-color: #ff6b9d;
+    }
+    
+    .btn-primary:hover {
+        background-color: #ff4d8d;
+        border-color: #ff4d8d;
+    }
+    
+    .progress-bar.bg-primary {
+        background-color: #ff6b9d !important;
+    }
+    
+    .border-primary {
+        border-color: #ff6b9d !important;
+    }
+    
+    .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-radius: 5px;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .skill-badge {
+        font-size: 0.8rem;
+    }
+    
+    .card {
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Skip link для доступности */
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 6px;
+        background: #ff6b9d;
+        color: white;
+        padding: 8px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 10000;
+    }
+    
+    .skip-link:focus {
+        top: 6px;
+    }
+
+    /* Улучшенный фокус */
+    :focus-visible {
+        outline: 2px solid #ff6b9d;
+        outline-offset: 2px;
+    }
+
+    /* Адаптивная сетка для проектов */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* Безопасные области для мобильных */
+    .navbar {
+        padding-top: calc(.75rem + env(safe-area-inset-top, 0px));
+        padding-bottom: calc(.75rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    .object-fit-cover { object-fit: cover; }
+    .object-fit-contain { object-fit: contain; } 
+    .object-fit-fill { object-fit: fill; } 
+    </style>
 </head>
 <body class="bg-light">
+    <!-- Skip link для доступности -->
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+
     <div class="container-fluid p-0">
         <header class="bg-white border-bottom py-3">
             <div class="container">
@@ -34,7 +132,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
+                            <a class="nav-link active" href="index.html">
                                 <i class="bi bi-house me-1"></i>Главная
                             </a>
                         </li>
@@ -58,7 +156,7 @@
             </div>
         </nav>
 
-        <main class="container my-5">
+        <main id="main" class="container my-5">
             <!-- Основная информация -->
             <div class="row justify-content-center mb-5">
                 <div class="col-md-10">
@@ -66,10 +164,16 @@
                         <div class="card-body p-5">
                             <div class="row align-items-center">
                                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                                    <div class="border overflow-hidden mx-auto rounded-3" 
-                                        style="width: 200px; height: 200px;">
-                                        <img src="images/photo.png" alt="Фото" 
-                                            class="img-fluid h-100 w-100" style="object-fit: cover;">
+                                    <div class="border overflow-hidden mx-auto rounded-3" style="width: 200px; height: 200px;">
+                                        <picture>
+                                            <source srcset="images/photo-150.webp 150w, images/photo-200.webp 200w" type="image/webp" sizes="200px">
+                                            <source srcset="images/photo-150.png 150w, images/photo-200.png 200w" type="image/png" sizes="200px">
+                                            <img src="images/photo-200.png" 
+                                                class="img-fluid h-100 w-100 object-fit-cover"
+                                                width="200" height="200"
+                                                alt="Фото"
+                                                fetchpriority="high">
+                                        </picture>
                                     </div>
                                 </div>
                                 
@@ -141,38 +245,32 @@
                         <div class="card-body p-5">
                             <h2 class="text-primary mb-4 text-center">Лучшие проекты</h2>
                             
-                            <div class="row">
-                                <div class="col-md-4 mb-4">
-                                    <div class="card border-primary h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title text-primary">П1</h5>
-                                            <p class="card-text">Описание проекта 1</p>
-                                        </div>
+                            <div class="projects-grid">
+                                <div class="card border-primary h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-primary">П1</h5>
+                                        <p class="card-text">Описание проекта 1</p>
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-4 mb-4">
-                                    <div class="card border-primary h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title text-primary">П2</h5>
-                                            <p class="card-text">Описание проекта 2</p>
-                                        </div>
+                                <div class="card border-primary h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-primary">П2</h5>
+                                        <p class="card-text">Описание проекта 2</p>
                                     </div>
                                 </div>
                                 
-                                <div class="col-md-4 mb-4">
-                                    <div class="card border-primary h-100">
-                                        <div class="card-body text-center">
-                                            <h5 class="card-title text-primary">П3</h5>
-                                            <p class="card-text">Описание проекта 3</p>
-                                        </div>
+                                <div class="card border-primary h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title text-primary">П3</h5>
+                                        <p class="card-text">Описание проекта 3</p>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="text-center mt-4">
                                 <a href="pages/projects.html" class="btn btn-outline-primary">
-                                    Посмотреть все проекты.
+                                    Посмотреть все проекты
                                 </a>
                             </div>
                         </div>
@@ -189,61 +287,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <style>
-    :root {
-        --bs-primary: #ff6b9d;
-        --bs-primary-rgb: 255, 107, 157;
-    }
-    
-    .text-primary {
-        color: #ff6b9d !important;
-    }
-    
-    .bg-primary {
-        background-color: #ff6b9d !important;
-    }
-    
-    .btn-primary {
-        background-color: #ff6b9d;
-        border-color: #ff6b9d;
-    }
-    
-    .btn-primary:hover {
-        background-color: #ff4d8d;
-        border-color: #ff4d8d;
-    }
-    
-    .progress-bar.bg-primary {
-        background-color: #ff6b9d !important;
-    }
-    
-    .border-primary {
-        border-color: #ff6b9d !important;
-    }
-    
-    .nav-link.active {
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        border-radius: 5px;
-    }
-    
-    .profile-img {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
-    
-    .skill-badge {
-        font-size: 0.8rem;
-    }
-    
-    .card {
-        transition: transform 0.3s ease;
-    }
-    
-    .card:hover {
-        transform: translateY(-5px);
-    }
-    </style>
 </body>
 </html>
