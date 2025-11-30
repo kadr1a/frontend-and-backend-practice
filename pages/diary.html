@@ -60,7 +60,6 @@
         font-size: 0.7rem;
     }
 
-    /* Skip link для доступности */
     .skip-link {
         position: absolute;
         top: -40px;
@@ -77,7 +76,6 @@
         top: 6px;
     }
 
-    /* Улучшенный фокус */
     :focus-visible {
         outline: 2px solid #ff6b9d;
         outline-offset: 2px;
@@ -85,11 +83,9 @@
     </style>
 </head>
 <body class="bg-light">
-    <!-- Skip link для доступности -->
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
     <div class="container-fluid p-0">
-        <!-- Хэдер -->
         <header class="bg-white border-bottom py-3">
             <div class="container">
                 <div class="row align-items-center">
@@ -106,8 +102,7 @@
             </div>
         </header>
 
-        <!-- Навигация -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Основная навигация">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -116,22 +111,22 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="../index.html">
-                                <i class="bi bi-house me-1"></i>Главная
+                                <i class="bi bi-house me-1" aria-hidden="true"></i>Главная
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="diary.html">
-                                <i class="bi bi-journal-text me-1"></i>Дневник
+                            <a class="nav-link active" href="diary.html" aria-current="page">
+                                <i class="bi bi-journal-text me-1" aria-hidden="true"></i>Дневник
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="projects.html">
-                                <i class="bi bi-display me-1"></i>Проекты
+                                <i class="bi bi-display me-1" aria-hidden="true"></i>Проекты
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contacts.html">
-                                <i class="bi bi-telephone me-1"></i>Связь
+                                <i class="bi bi-telephone me-1" aria-hidden="true"></i>Связь
                             </a>
                         </li>
                     </ul>
@@ -139,7 +134,6 @@
             </div>
         </nav>
 
-        <!-- Основное -->
         <main id="main" class="container my-4">
             <div class="row mb-4">
                 <div class="col">
@@ -148,19 +142,17 @@
             </div>
 
             <div class="row g-4">
-                <!-- прогресс обучения -->
                 <div class="col-md-8">
                     <div class="card shadow-sm border-0 h-100">
                         <div class="card-body p-4">
                             <h4 class="text-primary mb-4">История обучения</h4>
                             
                             <div class="timeline">
-                                <!-- зап 1 -->
                                 <div class="d-flex mb-4">
                                     <div class="flex-shrink-0">
                                         <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
                                              style="width: 40px; height: 40px;">
-                                            <i class="bi bi-check-lg"></i>
+                                            <i class="bi bi-check-lg" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
@@ -170,12 +162,11 @@
                                     </div>
                                 </div>
 
-                                <!-- зап 2 -->
                                 <div class="d-flex mb-4">
                                     <div class="flex-shrink-0">
                                         <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
                                              style="width: 40px; height: 40px;">
-                                            <i class="bi bi-check-lg"></i>
+                                            <i class="bi bi-check-lg" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
@@ -185,12 +176,11 @@
                                     </div>
                                 </div>
 
-                                <!-- зап 3 -->
                                 <div class="d-flex mb-4">
                                     <div class="flex-shrink-0">
                                         <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center" 
                                              style="width: 40px; height: 40px;">
-                                            <i class="bi bi-arrow-clockwise"></i>
+                                            <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 ms-3">
@@ -204,16 +194,14 @@
                     </div>
                 </div>
 
-                <!-- текущие курсы -->
                 <div class="col-md-4">
                     <div class="card shadow-sm border-0 h-100">
                         <div class="card-body p-4">
                             <h4 class="text-primary mb-4">
-                                <i class="bi bi-book me-2"></i>Текущие курсы
+                                <i class="bi bi-book me-2" aria-hidden="true"></i>Текущие курсы
                             </h4>
                             <p class="text-muted mb-4">Отслеживание прогресса по текущим учебным предметам</p>
                             
-                            <!-- Курс 1 -->
                             <div class="mb-4">
                                 <div class="d-flex justify-content-between mb-2">
                                     <span class="fw-medium">Веб-разработка</span>
@@ -224,7 +212,6 @@
                                 </div>
                             </div>
 
-                            <!-- Курс 2 -->
                             <div class="mb-4">
                                 <div class="d-flex justify-content-between mb-2">
                                     <span class="fw-medium">JavaScript</span>
@@ -240,7 +227,6 @@
             </div>            
         </main>
 
-        <!-- футер -->
         <footer class="bg-dark text-white py-4 mt-5">
             <div class="container text-center">
                 <p class="mb-0">&copy; 2024 Мусариева Екатерина. Все права защищены.</p>
